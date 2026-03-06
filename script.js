@@ -500,61 +500,414 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Gallery Filter Functionality
-const galleryFilters = document.querySelectorAll('.gallery-filter');
-const galleryItems = document.querySelectorAll('.gallery-item');
+// ============================================
+// ADVANCED GALLERY FUNCTIONALITY
+// ============================================
 
-galleryFilters.forEach(filter => {
-    filter.addEventListener('click', () => {
-        // Remove active class from all filters
-        galleryFilters.forEach(f => f.classList.remove('active'));
-        // Add active class to clicked filter
-        filter.classList.add('active');
+class AdvancedGallery {
+    constructor() {
+        this.currentIndex = 0;
+        this.filteredItems = [];
+        this.allItems = [];
+        this.isSlideshowActive = false;
+        this.slideshowInterval = null;
+        this.slideshowSpeed = 2000;
         
-        const filterValue = filter.getAttribute('data-filter');
+        this.init();
+    }
+    
+    init() {
+        // Get all gallery items
+        this.allItems = Array.from(document.querySelectorAll('.gallery-item'));
+        this.filteredItems = [...this.allItems];
         
-        galleryItems.forEach(item => {
-            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                item.classList.remove('hidden');
-                item.style.animation = 'fade-in 0.5s ease';
-            } else {
-                item.classList.add('hidden');
+        // Initialize filters
+        this.initFilters();
+        
+        // Initialize sorting
+        this.initSorting();
+        
+        // Initialize lightbox
+        this.initLightbox();
+        
+        // Initialize slideshow
+        this.initSlideshow();
+        
+        // Add data attributes to items
+        this.addDataAttributes();
+    }
+    
+    addDataAttributes() {
+        this.allItems.forEach((item, index) => {
+            const imageContainer = item.querySelector('.gallery-image');
+            if (imageContainer && !imageContainer.dataset.index) {
+                imageContainer.dataset.index = index;
+                imageContainer.dataset.src = imageContainer.querySelector('img')?.src || 
+                                           `https://via.placeholder.com/800x800/9333ea/ffffff?text=Image+${index + 1}`;
+                imageContainer.dataset.title = `Image ${index + 1}`;
             }
-        });
-    });
-});
-
-
-// Gallery Modal
-const galleryModal = document.getElementById('gallery-modal');
-if (galleryModal) {
-    const closeBtn = galleryModal.querySelector('.gallery-modal-close');
-    if (closeBtn) {
-        closeBtn.addEventListener('click', () => {
-            galleryModal.classList.remove('active');
         });
     }
     
-    galleryModal.addEventListener('click', (e) => {
-        if (e.target === galleryModal) {
-            galleryModal.classList.remove('active');
+    initFilters() {
+        const filters = document.querySelectorAll('.gallery-filter');
+        filters.forEach(filter => {
+            filter.addEventListener('click', () => {
+                filters.forEach(f => f.classList.remove('active'));
+                filter.classList.add('active');
+                
+                const filterValue = filter.getAttribute('data-filter');
+                this.filter(filterValue);
+            });
+        });
+    }
+    
+    filter(category) {
+        if (category === 'all') {
+            this.filteredItems = [...this.allItems];
+        } else {
+            this.filteredItems = this.allItems.filter(item => 
+                item.getAttribute('data-category') === category
+            );
         }
-    });
-}
-
-if (galleryModal) {
-    document.querySelectorAll('.gallery-image').forEach(image => {
-        image.addEventListener('click', () => {
-            // When you add actual images, replace this with image.src
-            // For now, using placeholder
-            const modalImg = galleryModal.querySelector('img');
-            if (modalImg) {
-                // modalImg.src = image.querySelector('img')?.src || '';
-                galleryModal.classList.add('active');
+        
+        this.render();
+        this.updateSort();
+    }
+    
+    initSorting() {
+        const sortSelect = document.getElementById('gallery-sort');
+        if (sortSelect) {
+            sortSelect.addEventListener('change', (e) => {
+                this.sort(e.target.value);
+            });
+        }
+    }
+    
+    sort(sortType) {
+        const items = [...this.filteredItems];
+        
+        switch(sortType) {
+            case 'newest':
+                items.reverse(); // Reverse order (assuming last items are newest)
+                break;
+            case 'oldest':
+                // Keep original order
+                break;
+            case 'name-asc':
+                items.sort((a, b) => {
+                    const titleA = a.dataset.title || a.querySelector('h3')?.textContent || '';
+                    const titleB = b.dataset.title || b.querySelector('h3')?.textContent || '';
+                    return titleA.localeCompare(titleB);
+                });
+                break;
+            case 'name-desc':
+                items.sort((a, b) => {
+                    const titleA = a.dataset.title || a.querySelector('h3')?.textContent || '';
+                    const titleB = b.dataset.title || b.querySelector('h3')?.textContent || '';
+                    return titleB.localeCompare(titleA);
+                });
+                break;
+        }
+        
+        this.filteredItems = items;
+        this.render();
+    }
+    
+    updateSort() {
+        const sortSelect = document.getElementById('gallery-sort');
+        if (sortSelect && sortSelect.value !== 'default') {
+            this.sort(sortSelect.value);
+        }
+    }
+    
+    render() {
+        const grid = document.getElementById('gallery-grid');
+        if (!grid) return;
+        
+        // Reorder DOM elements
+        this.filteredItems.forEach(item => {
+            grid.appendChild(item);
+            item.classList.remove('hidden');
+            item.style.animation = 'fadeIn 0.5s ease';
+        });
+        
+        // Hide items not in filtered list
+        this.allItems.forEach(item => {
+            if (!this.filteredItems.includes(item)) {
+                item.classList.add('hidden');
             }
         });
-    });
+    }
+    
+    initLightbox() {
+        const modal = document.getElementById('gallery-modal');
+        const closeBtn = modal?.querySelector('.gallery-modal-close');
+        const prevBtn = modal?.querySelector('.gallery-nav-prev');
+        const nextBtn = modal?.querySelector('.gallery-nav-next');
+        const downloadBtn = document.getElementById('gallery-download');
+        const fullscreenBtn = document.getElementById('gallery-fullscreen');
+        
+        // Open lightbox on image click
+        document.querySelectorAll('.gallery-image').forEach((imageContainer, index) => {
+            imageContainer.addEventListener('click', () => {
+                this.openLightbox(index);
+            });
+        });
+        
+        // Close button
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => this.closeLightbox());
+        }
+        
+        // Close on backdrop click
+        const backdrop = modal?.querySelector('.gallery-modal-backdrop');
+        if (backdrop) {
+            backdrop.addEventListener('click', () => this.closeLightbox());
+        }
+        
+        // Navigation buttons
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => this.showPrevious());
+        }
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => this.showNext());
+        }
+        
+        // Download button
+        if (downloadBtn) {
+            downloadBtn.addEventListener('click', () => this.downloadImage());
+        }
+        
+        // Fullscreen button
+        if (fullscreenBtn) {
+            fullscreenBtn.addEventListener('click', () => this.toggleFullscreen());
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!modal?.classList.contains('active')) return;
+            
+            switch(e.key) {
+                case 'Escape':
+                    this.closeLightbox();
+                    break;
+                case 'ArrowLeft':
+                    this.showPrevious();
+                    break;
+                case 'ArrowRight':
+                    this.showNext();
+                    break;
+            }
+        });
+    }
+    
+    openLightbox(index) {
+        const modal = document.getElementById('gallery-modal');
+        if (!modal) return;
+        
+        // Find index in filtered items
+        const clickedItem = this.allItems[index];
+        this.currentIndex = this.filteredItems.indexOf(clickedItem);
+        
+        if (this.currentIndex === -1) {
+            this.currentIndex = 0;
+        }
+        
+        this.updateLightbox();
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        
+        // Stop slideshow if active
+        if (this.isSlideshowActive) {
+            this.stopSlideshow();
+        }
+    }
+    
+    closeLightbox() {
+        const modal = document.getElementById('gallery-modal');
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        this.stopSlideshow();
+    }
+    
+    showPrevious() {
+        if (this.filteredItems.length === 0) return;
+        this.currentIndex = (this.currentIndex - 1 + this.filteredItems.length) % this.filteredItems.length;
+        this.updateLightbox();
+    }
+    
+    showNext() {
+        if (this.filteredItems.length === 0) return;
+        this.currentIndex = (this.currentIndex + 1) % this.filteredItems.length;
+        this.updateLightbox();
+    }
+    
+    updateLightbox() {
+        const modal = document.getElementById('gallery-modal');
+        const image = document.getElementById('gallery-modal-image');
+        const title = document.getElementById('gallery-image-title');
+        const counter = document.getElementById('gallery-image-counter');
+        
+        if (!modal || !image || this.filteredItems.length === 0) return;
+        
+        const currentItem = this.filteredItems[this.currentIndex];
+        const imageContainer = currentItem.querySelector('.gallery-image');
+        const imageSrc = imageContainer?.dataset.src || 
+                        imageContainer?.querySelector('img')?.src ||
+                        `https://via.placeholder.com/800x800/9333ea/ffffff?text=Image+${this.currentIndex + 1}`;
+        const imageTitle = imageContainer?.dataset.title || 
+                          currentItem.dataset.title || 
+                          `Image ${this.currentIndex + 1}`;
+        
+        // Show loader
+        const loader = modal.querySelector('.gallery-image-loader');
+        if (loader) loader.classList.add('active');
+        
+        // Load image
+        const img = new Image();
+        img.onload = () => {
+            image.src = imageSrc;
+            image.alt = imageTitle;
+            if (title) title.textContent = imageTitle;
+            if (counter) counter.textContent = `${this.currentIndex + 1} / ${this.filteredItems.length}`;
+            if (loader) loader.classList.remove('active');
+        };
+        img.onerror = () => {
+            if (loader) loader.classList.remove('active');
+        };
+        img.src = imageSrc;
+        
+        // Store current image data for download
+        image.dataset.downloadSrc = imageSrc;
+        image.dataset.downloadTitle = imageTitle;
+    }
+    
+    downloadImage() {
+        const image = document.getElementById('gallery-modal-image');
+        if (!image || !image.dataset.downloadSrc) return;
+        
+        const link = document.createElement('a');
+        link.href = image.dataset.downloadSrc;
+        link.download = image.dataset.downloadTitle || 'image.jpg';
+        link.target = '_blank';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+    
+    toggleFullscreen() {
+        const modal = document.getElementById('gallery-modal');
+        if (!modal) return;
+        
+        if (!document.fullscreenElement) {
+            modal.requestFullscreen().catch(err => {
+                console.log('Error attempting to enable fullscreen:', err);
+            });
+        } else {
+            document.exitFullscreen();
+        }
+    }
+    
+    initSlideshow() {
+        const toggleBtn = document.getElementById('slideshow-toggle');
+        const playPauseBtn = document.getElementById('slideshow-play-pause');
+        const speedSelect = document.getElementById('slideshow-speed');
+        
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                if (this.isSlideshowActive) {
+                    this.stopSlideshow();
+                } else {
+                    this.startSlideshow();
+                }
+            });
+        }
+        
+        if (playPauseBtn) {
+            playPauseBtn.addEventListener('click', () => {
+                if (this.isSlideshowActive) {
+                    this.stopSlideshow();
+                } else {
+                    this.resumeSlideshow();
+                }
+            });
+        }
+        
+        if (speedSelect) {
+            speedSelect.addEventListener('change', (e) => {
+                this.slideshowSpeed = parseInt(e.target.value);
+                if (this.isSlideshowActive) {
+                    this.stopSlideshow();
+                    this.startSlideshow();
+                }
+            });
+        }
+    }
+    
+    startSlideshow() {
+        if (this.filteredItems.length === 0) {
+            alert('No images to display in slideshow. Please select a filter.');
+            return;
+        }
+        
+        // Open lightbox if not open
+        const modal = document.getElementById('gallery-modal');
+        if (!modal.classList.contains('active')) {
+            this.openLightbox(0);
+        }
+        
+        this.isSlideshowActive = true;
+        const toggleBtn = document.getElementById('slideshow-toggle');
+        const playPauseBtn = document.getElementById('slideshow-play-pause');
+        
+        if (toggleBtn) {
+            toggleBtn.innerHTML = '<i class="fas fa-stop mr-2"></i> Stop Slideshow';
+            toggleBtn.classList.add('active');
+        }
+        
+        if (playPauseBtn) {
+            playPauseBtn.querySelector('i').className = 'fas fa-pause';
+        }
+        
+        this.slideshowInterval = setInterval(() => {
+            this.showNext();
+        }, this.slideshowSpeed);
+    }
+    
+    stopSlideshow() {
+        this.isSlideshowActive = false;
+        if (this.slideshowInterval) {
+            clearInterval(this.slideshowInterval);
+            this.slideshowInterval = null;
+        }
+        
+        const toggleBtn = document.getElementById('slideshow-toggle');
+        const playPauseBtn = document.getElementById('slideshow-play-pause');
+        
+        if (toggleBtn) {
+            toggleBtn.innerHTML = '<i class="fas fa-play mr-2"></i> Start Slideshow';
+            toggleBtn.classList.remove('active');
+        }
+        
+        if (playPauseBtn) {
+            playPauseBtn.querySelector('i').className = 'fas fa-play';
+        }
+    }
+    
+    resumeSlideshow() {
+        if (this.filteredItems.length === 0) return;
+        this.startSlideshow();
+    }
 }
+
+// Initialize Advanced Gallery
+let advancedGallery;
+document.addEventListener('DOMContentLoaded', () => {
+    advancedGallery = new AdvancedGallery();
+});
 
 // Event Tabs
 const eventTabs = document.querySelectorAll('.event-tab');
