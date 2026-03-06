@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Videos - DJ Lakhan</title>
+    <meta name="description" content="All Music Videos & Performances by DJ Lakhan">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#a855f7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 bg-gray-900/90 backdrop-blur-md border-b border-purple-500/20 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-music text-white"></i>
+                        </div>
+                        <span class="text-2xl font-bold font-bebas bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">DJ LAKHAN</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-purple-400 text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- Desktop Menu -->
+                <ul class="hidden lg:flex items-center space-x-4 font-rajdhani font-semibold text-sm">
+                    <li><a href="index.html" class="nav-link hover:text-purple-400 transition-colors">Home</a></li>
+                    <li><a href="remixes.html" class="nav-link hover:text-purple-400 transition-colors">Remixes</a></li>
+                    <li><a href="songs.html" class="nav-link hover:text-purple-400 transition-colors">Songs</a></li>
+                    <li><a href="videos.html" class="nav-link text-purple-400">Videos</a></li>
+                    <li><a href="index.html#about" class="nav-link hover:text-purple-400 transition-colors">About</a></li>
+                    <li><a href="index.html#contact" class="nav-link hover:text-purple-400 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <ul id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 font-rajdhani font-semibold pb-4">
+                <li><a href="index.html" class="block hover:text-purple-400 transition-colors">Home</a></li>
+                <li><a href="remixes.html" class="block hover:text-purple-400 transition-colors">Remixes</a></li>
+                <li><a href="songs.html" class="block hover:text-purple-400 transition-colors">Songs</a></li>
+                <li><a href="videos.html" class="block text-purple-400">Videos</a></li>
+                <li><a href="index.html#about" class="block hover:text-purple-400 transition-colors">About</a></li>
+                <li><a href="index.html#contact" class="block hover:text-purple-400 transition-colors">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-12 bg-gray-800/50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <a href="index.html" class="text-purple-400 hover:text-purple-300 font-rajdhani mb-4 inline-flex items-center">
+                        <i class="fas fa-arrow-left mr-2"></i> Back to Home
+                    </a>
+                    <h1 class="text-5xl md:text-6xl font-bebas mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                        ALL VIDEOS
+                    </h1>
+                    <p class="text-gray-400 font-rajdhani text-lg">Watch all music videos, performances, and behind-the-scenes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Grid -->
+    <section class="py-12 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Video Card Template -->
+                <!-- Copy this structure to add more videos -->
+                <div class="video-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <div class="aspect-video bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
+                            <i class="fas fa-play-circle text-6xl text-white/80"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button class="play-btn" data-video="YOUR_VIDEO_ID">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-black/70 px-2 py-1 rounded text-xs font-rajdhani">
+                            <i class="fas fa-clock mr-1"></i> 3:45
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-orbitron mb-2">Video Title</h3>
+                    <p class="text-gray-400 font-rajdhani text-sm">Released: 2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="video-modal">
+        <div class="video-modal-content">
+            <button class="video-modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-purple-500/20 py-12 mt-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="text-gray-400 font-rajdhani text-sm">
+                    &copy; 2024 DJ Lakhan. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="pwa.js"></script>
+</body>
+</html>

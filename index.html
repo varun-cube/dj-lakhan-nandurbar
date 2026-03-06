@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Lakhan - Official Website</title>
+    <meta name="description" content="Official website of DJ Lakhan - Remixes, Original Songs, Lyrics, Performances & More">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#a855f7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="DJ Lakhan">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-192x192.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-16x16.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 bg-gray-900/90 backdrop-blur-md border-b border-purple-500/20 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-full flex items-center justify-center">
+                        <i class="fas fa-music text-white"></i>
+                    </div>
+                    <span class="text-2xl font-bold font-bebas bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">DJ LAKHAN</span>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-purple-400 text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- Desktop Menu -->
+                <ul class="hidden lg:flex items-center space-x-4 font-rajdhani font-semibold text-sm">
+                    <li><a href="#home" class="nav-link hover:text-purple-400 transition-colors">Home</a></li>
+                    <li><a href="remixes.html" class="nav-link hover:text-purple-400 transition-colors">Remixes</a></li>
+                    <li><a href="songs.html" class="nav-link hover:text-purple-400 transition-colors">Songs</a></li>
+                    <li><a href="videos.html" class="nav-link hover:text-purple-400 transition-colors">Videos</a></li>
+                    <li><a href="#gallery" class="nav-link hover:text-purple-400 transition-colors">Gallery</a></li>
+                    <li><a href="#events" class="nav-link hover:text-purple-400 transition-colors">Events</a></li>
+                    <li><a href="#blog" class="nav-link hover:text-purple-400 transition-colors">News</a></li>
+                    <li><a href="#about" class="nav-link hover:text-purple-400 transition-colors">About</a></li>
+                    <li><a href="#contact" class="nav-link hover:text-purple-400 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <ul id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 font-rajdhani font-semibold pb-4 max-h-96 overflow-y-auto">
+                <li><a href="#home" class="block hover:text-purple-400 transition-colors">Home</a></li>
+                <li><a href="remixes.html" class="block hover:text-purple-400 transition-colors">Remixes</a></li>
+                <li><a href="songs.html" class="block hover:text-purple-400 transition-colors">Songs</a></li>
+                <li><a href="videos.html" class="block hover:text-purple-400 transition-colors">Videos</a></li>
+                <li><a href="#gallery" class="block hover:text-purple-400 transition-colors">Gallery</a></li>
+                <li><a href="#events" class="block hover:text-purple-400 transition-colors">Events</a></li>
+                <li><a href="#blog" class="block hover:text-purple-400 transition-colors">News</a></li>
+                <li><a href="#merchandise" class="block hover:text-purple-400 transition-colors">Merchandise</a></li>
+                <li><a href="#testimonials" class="block hover:text-purple-400 transition-colors">Testimonials</a></li>
+                <li><a href="#press" class="block hover:text-purple-400 transition-colors">Press</a></li>
+                <li><a href="#awards" class="block hover:text-purple-400 transition-colors">Awards</a></li>
+                <li><a href="#about" class="block hover:text-purple-400 transition-colors">About</a></li>
+                <li><a href="#contact" class="block hover:text-purple-400 transition-colors">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-900/50 via-gray-900 to-cyan-900/50"></div>
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
+        
+        <!-- Floating Particles -->
+        <div class="particles"></div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <div class="animate-fade-in">
+                <h1 class="text-6xl md:text-8xl font-bebas mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent animate-pulse-slow">
+                    DJ LAKHAN
+                </h1>
+                <p class="text-xl md:text-3xl font-orbitron mb-6 text-purple-300">Mixing Beats, Creating Magic</p>
+                <p class="text-lg md:text-xl font-rajdhani mb-8 text-gray-300 max-w-2xl mx-auto">
+                    Remixes • Original Songs • Lyrics • Performances • Influencer
+                </p>
+                <p class="text-sm md:text-base font-rajdhani mb-4 text-purple-300">
+                    <i class="fab fa-instagram mr-2"></i>
+                    <a href="https://www.instagram.com/dj_lakhan._nandurbar_18_/" target="_blank" rel="noopener noreferrer" class="hover:text-purple-400 transition-colors">@dj_lakhan._nandurbar_18_</a>
+                    <span class="mx-2">•</span>
+                    <i class="fab fa-youtube mr-2"></i>
+                    <a href="https://www.youtube.com/@DjLakhanNandurbar18" target="_blank" rel="noopener noreferrer" class="hover:text-purple-400 transition-colors">@DjLakhanNandurbar18</a>
+                </p>
+                
+                <!-- Statistics -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-8 max-w-4xl mx-auto">
+                    <div class="stat-box">
+                        <div class="text-3xl md:text-4xl font-bebas text-purple-400 mb-1" data-count="138">0</div>
+                        <div class="text-sm md:text-base text-gray-400 font-rajdhani">K+ Subscribers</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="text-3xl md:text-4xl font-bebas text-cyan-400 mb-1" data-count="428">0</div>
+                        <div class="text-sm md:text-base text-gray-400 font-rajdhani">Videos</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="text-3xl md:text-4xl font-bebas text-pink-400 mb-1" data-count="43">0</div>
+                        <div class="text-sm md:text-base text-gray-400 font-rajdhani">M+ Views</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="text-3xl md:text-4xl font-bebas text-purple-400 mb-1" data-count="5">0</div>
+                        <div class="text-sm md:text-base text-gray-400 font-rajdhani">Years Creating</div>
+                    </div>
+                </div>
+                
+                <!-- Social Media Links -->
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://www.instagram.com/dj_lakhan._nandurbar_18_/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@DjLakhanNandurbar18" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://open.spotify.com/artist/5camv57kOKlhE8YxkXrK2n?si=XgNjKTHAQEuzv3cvvTgRsw" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Spotify">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                    <a href="https://www.facebook.com/lakhan.hirea" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://music.apple.com/us/artist/dj-lakhan-nandurbar/1604366051" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Apple Music">
+                        <i class="fab fa-apple"></i>
+                    </a>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#remixes" class="btn-primary">Explore Remixes</a>
+                    <a href="#contact" class="btn-secondary">Book Now</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-purple-400 text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Remixes Section -->
+    <section id="remixes" class="py-20 bg-gray-800/50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bebas mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    DJ REMIXES
+                </h2>
+                <p class="text-gray-400 font-rajdhani text-lg">Latest Mixes & Remixes</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Remix Card 1 -->
+                <!-- Add data-youtube="VIDEO_ID" or data-soundcloud="TRACK_ID" to enable player -->
+                <div class="music-card group" data-type="youtube" data-youtube="_WgDAPZ-VEY">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <div class="aspect-video bg-gradient-to-br from-purple-600 to-cyan-600 flex items-center justify-center">
+                            <i class="fas fa-play-circle text-6xl text-white/80 group-hover:text-white transition-all"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button class="play-btn" data-type="youtube" data-youtube="_WgDAPZ-VEY">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-orbitron mb-2">Remix Title 1</h3>
+                    <p class="text-gray-400 font-rajdhani text-sm">Original Artist</p>
+                    <div class="flex items-center mt-4 space-x-4">
+                        <a href="https://www.youtube.com/@DjLakhanNandurbar18" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:text-purple-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://open.spotify.com/artist/5camv57kOKlhE8YxkXrK2n?si=XgNjKTHAQEuzv3cvvTgRsw" target="_blank" rel="noopener noreferrer" class="text-green-400 hover:text-green-300">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Remix Card 2 -->
+                <div class="music-card group" data-type="youtube" data-youtube="YOUR_YOUTUBE_VIDEO_ID_2">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <div class="aspect-video bg-gradient-to-br from-pink-600 to-purple-600 flex items-center justify-center">
+                            <i class="fas fa-play-circle text-6xl text-white/80 group-hover:text-white transition-all"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button class="play-btn" data-type="youtube" data-youtube="YOUR_YOUTUBE_VIDEO_ID_2">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-orbitron mb-2">Remix Title 2</h3>
+                    <p class="text-gray-400 font-rajdhani text-sm">Original Artist</p>
+                    <div class="flex items-center mt-4 space-x-4">
+                        <a href="https://www.youtube.com/@DjLakhanNandurbar18" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:text-purple-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://open.spotify.com/artist/5camv57kOKlhE8YxkXrK2n?si=XgNjKTHAQEuzv3cvvTgRsw" target="_blank" rel="noopener noreferrer" class="text-green-400 hover:text-green-300">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Remix Card 3 -->
+                <div class="music-card group" data-type="youtube" data-youtube="YOUR_YOUTUBE_VIDEO_ID_3">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <div class="aspect-video bg-gradient-to-br from-cyan-600 to-blue-600 flex items-center justify-center">
+                            <i class="fas fa-play-circle text-6xl text-white/80 group-hover:text-white transition-all"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button class="play-btn" data-type="youtube" data-youtube="YOUR_YOUTUBE_VIDEO_ID_3">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-orbitron mb-2">Remix Title 3</h3>
+                    <p class="text-gray-400 font-rajdhani text-sm">Original Artist</p>
+                    <div class="flex items-center mt-4 space-x-4">
+                        <a href="https://www.youtube.com/@DjLakhanNandurbar18" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:text-purple-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://open.spotify.com/artist/5camv57kOKlhE8YxkXrK2n?si=XgNjKTHAQEuzv3cvvTgRsw" target="_blank" rel="noopener noreferrer" class="text-green-400 hover:text-green-300">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- See More Button -->
+            <div class="text-center mt-12">
+                <a href="remixes.html" class="btn-secondary inline-flex items-center">
+                    <span>See All Remixes</span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Original Songs Section -->
+    <section id="songs" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bebas mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    ORIGINAL SONGS
+                </h2>
+                <p class="text-gray-400 font-rajdhani text-lg">My Own Creations</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Song Card 1 -->
+                <!-- Add data-youtube="VIDEO_ID" or data-soundcloud="TRACK_ID" to enable player -->
+                <div class="music-card-large group" data-type="youtube" data-youtube="YOUR_YOUTUBE_VIDEO_ID_4">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="relative flex-shrink-0">
+                            <div class="w-full md:w-48 h-48 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-music text-6xl text-white/80"></i>
+                            </div>
+                            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
+                                <button class="play-btn-large" data-type="youtube" data-youtube="YOUR_YOUTUBE_VIDEO_ID_4">
+                                    <i class="fas fa-play text-3xl"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-orbitron mb-2">Song Title 1</h3>
+                            <p class="text-gray-400 font-rajdhani mb-4">Written & Composed by DJ Lakhan</p>
+                            <p class="text-gray-300 font-rajdhani mb-4">Song description goes here...</p>
+                            <div class="flex items-center space-x-4 flex-wrap">
+                                <a href="https://open.spotify.com/artist/5camv57kOKlhE8YxkXrK2n?si=XgNjKTHAQEuzv3cvvTgRsw" target="_blank" rel="noopener noreferrer" class="btn-stream">
+                                    <i class="fab fa-spotify mr-2"></i> Spotify
+                                </a>
+                                <a href="https://www.youtube.com/@DjLakhanNandurbar18" target="_blank" rel="noopener noreferrer" class="btn-stream">
+                                    <i class="fab fa-youtube mr-2"></i> YouTube
+                                </a>
+                                <a href="https://music.apple.com/us/artist/dj-lakhan-nandurbar/1604366051" target="_blank" rel="noopener noreferrer" class="btn-stream">
+                                    <i class="fab fa-apple mr-2"></i> Apple Music
+                                </a>
+                                <a href="https://music.amazon.in/artists/B09Q67297R/dj-lakhan-nandurbar?marketplaceId=A21TJRUUN4KGV&musicTerritory=IN&ref=dm_sh_8Z5ZviRXjscjPK0KyJEFK1q70" target="_blank" rel="noopener noreferrer" class="btn-stream">
+                                    <i class="fab fa-amazon mr-2"></i> Prime Music
+                                </a>
+                                <a href="https://wynk.in/u/UEVBPyZAz" target="_blank" rel="noopener noreferrer" class="btn-stream">
+                                    <i class="fas fa-music mr-2"></i> Wynk Music
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Song Card 2 -->
+                <div class="music-card-large group" data-type="youtube" data-youtube="YOUR_YOUTUBE_VIDEO_ID_5">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="relative flex-shrink-0">
+                            <div class="w-full md:w-48 h-48 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-music text-6xl text-white/80"></i>
+                            </div>
+                            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
+                                <button class="play-btn-large" data-type="youtube" data-youtube="YOUR_YOUTUBE_VIDEO_ID_5">
+                                    <i class="fas fa-play text-3xl"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-orbitron mb-2">Song Title 2</h3>
+                            <p class="text-gray-400 font-rajdhani mb-4">Written & Composed by DJ Lakhan</p>
+                            <p class="text-gray-300 font-rajdhani mb-4">Song description goes here...</p>
+                            <div class="flex items-center space-x-4 flex-wrap">
+                                <button class="btn-stream">
+                                    <i class="fab fa-spotify mr-2"></i> Spotify
+                                </button>
+                                <button class="btn-stream">
+                                    <i class="fab fa-youtube mr-2"></i> YouTube
+                                </button>
+                                <button class="btn-stream">
+                                    <i class="fab fa-apple mr-2"></i> Apple Music
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lyrics Section -->
+    <section id="lyrics" class="py-20 bg-gray-800/50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bebas mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    LYRICS
+                </h2>
+                <p class="text-gray-400 font-rajdhani text-lg">Written by DJ Lakhan</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <!-- Lyrics Card 1 -->
+                <div class="lyrics-card mb-6">
+                    <h3 class="text-2xl font-orbitron mb-4 text-purple-400">Song Title - Lyrics</h3>
+                    <div class="space-y-4 font-rajdhani text-gray-300 leading-relaxed">
+                        <p>[Verse 1]</p>
+                        <p>Lyrics line 1...</p>
+                        <p>Lyrics line 2...</p>
+                        <p>Lyrics line 3...</p>
+                        <p class="mt-4">[Chorus]</p>
+                        <p>Chorus lyrics...</p>
+                        <p>More chorus lyrics...</p>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-gray-700">
+                        <p class="text-sm text-gray-400">Written by: DJ Lakhan</p>
+                    </div>
+                </div>
+                
+                <!-- Lyrics Card 2 -->
+                <div class="lyrics-card mb-6">
+                    <h3 class="text-2xl font-orbitron mb-4 text-purple-400">Another Song - Lyrics</h3>
+                    <div class="space-y-4 font-rajdhani text-gray-300 leading-relaxed">
+                        <p>[Verse 1]</p>
+                        <p>Lyrics line 1...</p>
+                        <p>Lyrics line 2...</p>
+                        <p>Lyrics line 3...</p>
+                        <p class="mt-4">[Chorus]</p>
+                        <p>Chorus lyrics...</p>
+                        <p>More chorus lyrics...</p>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-gray-700">
+                        <p class="text-sm text-gray-400">Written by: DJ Lakhan</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- See More Button -->
+            <div class="text-center mt-12">
+                <a href="songs.html" class="btn-secondary inline-flex items-center">
+                    <span>See All Songs</span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="statistics" class="py-16 bg-gray-900/50 border-y border-purple-500/20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bebas mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    BY THE NUMBERS
+                </h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <div class="stat-card text-center">
+                    <i class="fab fa-youtube text-5xl text-red-400 mb-4"></i>
+                    <div class="text-4xl font-bebas text-white mb-2" data-count="138">0</div>
+                    <p class="text-gray-400 font-rajdhani">K YouTube Subscribers</p>
+                </div>
+                <div class="stat-card text-center">
+                    <i class="fas fa-video text-5xl text-purple-400 mb-4"></i>
+                    <div class="text-4xl font-bebas text-white mb-2" data-count="428">0</div>
+                    <p class="text-gray-400 font-rajdhani">Videos Uploaded</p>
+                </div>
+                <div class="stat-card text-center">
+                    <i class="fas fa-eye text-5xl text-cyan-400 mb-4"></i>
+                    <div class="text-4xl font-bebas text-white mb-2" data-count="43">0</div>
+                    <p class="text-gray-400 font-rajdhani">Million Total Views</p>
+                </div>
+                <div class="stat-card text-center">
+                    <i class="fas fa-calendar text-5xl text-pink-400 mb-4"></i>
+                    <div class="text-4xl font-bebas text-white mb-2">2021</div>
+                    <p class="text-gray-400 font-rajdhani">Channel Started</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="py-20 bg-gray-800/50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bebas mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    MUSIC VIDEOS & PERFORMANCES
+                </h2>
+                <p class="text-gray-400 font-rajdhani text-lg">Watch Latest Videos</p>
+            </div>
+            
+            <!-- Instructions: To get YouTube Video ID, copy the ID from your YouTube URL -->
+            <!-- Example: https://www.youtube.com/watch?v=dQw4w9WgXcQ - Video ID is: dQw4w9WgXcQ -->
+            <!-- Replace the data-video values below with your actual YouTube video IDs -->
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Video Card 1 -->
+                <!-- Replace "YOUR_VIDEO_ID_1" with your actual YouTube video ID -->
+                <div class="video-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <div class="aspect-video bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
+                            <i class="fas fa-play-circle text-6xl text-white/80"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button class="play-btn" data-video="YOUR_VIDEO_ID_1">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-black/70 px-2 py-1 rounded text-xs font-rajdhani">
+                            <i class="fas fa-clock mr-1"></i> 3:45
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-orbitron mb-2">Music Video Title</h3>
+                    <p class="text-gray-400 font-rajdhani text-sm">Released: 2024</p>
+                </div>
+                
+                <!-- Video Card 2 -->
+                <!-- Replace "YOUR_VIDEO_ID_2" with your actual YouTube video ID -->
+                <div class="video-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <div class="aspect-video bg-gradient-to-br from-cyan-600 to-blue-600 flex items-center justify-center">
+                            <i class="fas fa-play-circle text-6xl text-white/80"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button class="play-btn" data-video="YOUR_VIDEO_ID_2">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-black/70 px-2 py-1 rounded text-xs font-rajdhani">
+                            <i class="fas fa-clock mr-1"></i> 4:20
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-orbitron mb-2">Live Performance</h3>
+                    <p class="text-gray-400 font-rajdhani text-sm">Festival 2024</p>
+                </div>
+                
+                <!-- Video Card 3 -->
+                <!-- Replace "YOUR_VIDEO_ID_3" with your actual YouTube video ID -->
+                <div class="video-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <div class="aspect-video bg-gradient-to-br from-pink-600 to-purple-600 flex items-center justify-center">
+                            <i class="fas fa-play-circle text-6xl text-white/80"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button class="play-btn" data-video="YOUR_VIDEO_ID_3">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-black/70 px-2 py-1 rounded text-xs font-rajdhani">
+                            <i class="fas fa-clock mr-1"></i> 5:10
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-orbitron mb-2">Behind the Scenes</h3>
+                    <p class="text-gray-400 font-rajdhani text-sm">Studio Session</p>
+                </div>
+            </div>
+            
+            <!-- See More Button -->
+            <div class="text-center mt-12">
+                <a href="videos.html" class="btn-secondary inline-flex items-center">
+                    <span>See All Videos</span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bebas mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    GALLERY
+                </h2>
+                <p class="text-gray-400 font-rajdhani text-lg">Photos & Moments</p>
+            </div>
+            
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button class="gallery-filter active" data-filter="all">All</button>
+                <button class="gallery-filter" data-filter="performances">Performances</button>
+                <button class="gallery-filter" data-filter="studio">Studio</button>
+                <button class="gallery-filter" data-filter="events">Events</button>
+                <button class="gallery-filter" data-filter="behind-scenes">Behind Scenes</button>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item group" data-category="performances">
+                    <div class="gallery-image bg-gradient-to-br from-purple-600 to-pink-600 aspect-square rounded-lg overflow-hidden cursor-pointer">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-image text-4xl text-white/50"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item group" data-category="studio">
+                    <div class="gallery-image bg-gradient-to-br from-cyan-600 to-blue-600 aspect-square rounded-lg overflow-hidden cursor-pointer">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-image text-4xl text-white/50"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item group" data-category="events">
+                    <div class="gallery-image bg-gradient-to-br from-pink-600 to-purple-600 aspect-square rounded-lg overflow-hidden cursor-pointer">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-image text-4xl text-white/50"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item group" data-category="behind-scenes">
+                    <div class="gallery-image bg-gradient-to-br from-purple-600 to-cyan-600 aspect-square rounded-lg overflow-hidden cursor-pointer">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-image text-4xl text-white/50"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item group" data-category="performances">
+                    <div class="gallery-image bg-gradient-to-br from-blue-600 to-cyan-600 aspect-square rounded-lg overflow-hidden cursor-pointer">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-image text-4xl text-white/50"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item group" data-category="events">
+                    <div class="gallery-image bg-gradient-to-br from-pink-600 to-red-600 aspect-square rounded-lg overflow-hidden cursor-pointer">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-image text-4xl text-white/50"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item group" data-category="studio">
+                    <div class="gallery-image bg-gradient-to-br from-purple-600 to-blue-600 aspect-square rounded-lg overflow-hidden cursor-pointer">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-image text-4xl text-white/50"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item group" data-category="behind-scenes">
+                    <div class="gallery-image bg-gradient-to-br from-cyan-600 to-green-600 aspect-square rounded-lg overflow-hidden cursor-pointer">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-image text-4xl text-white/50"></i>
+                        </div>
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events/Shows Section -->
+    <section id="events" class="py-20 bg-gray-800/50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bebas mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    EVENTS & SHOWS
+                </h2>
+                <p class="text-gray-400 font-rajdhani text-lg">Upcoming & Past Performances</p>
+            </div>
+            
+            <!-- Tabs -->
+            <div class="flex justify-center mb-8">
+                <div class="flex space-x-4 bg-gray-900/50 p-1 rounded-lg">
+                    <button class="event-tab active" data-tab="upcoming">Upcoming</button>
+                    <button class="event-tab" data-tab="past">Past Events</button>
+                </div>
+            </div>
+            
+            <!-- Upcoming Events -->
+            <div id="upcoming-events" class="event-content">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Event Card 1 -->
+                    <div class="event-card">
+                        <div class="event-date">
+                            <div class="text-3xl font-bebas">15</div>
+                            <div class="text-sm font-rajdhani">MAR</div>
+                        </div>
+                        <div class="flex-1 ml-4">
+                            <h3 class="text-xl font-orbitron mb-2">Music Festival 2024</h3>
+                            <p class="text-gray-400 font-rajdhani text-sm mb-2">
+                                <i class="fas fa-map-marker-alt mr-2"></i>Mumbai, Maharashtra
+                            </p>
+                            <p class="text-gray-500 font-rajdhani text-xs mb-4">
+                                <i class="fas fa-clock mr-2"></i>8:00 PM
+                            </p>
+                            <a href="#contact" class="btn-stream text-sm">Book Tickets</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Event Card 2 -->
+                    <div class="event-card">
+                        <div class="event-date">
+                            <div class="text-3xl font-bebas">22</div>
+                            <div class="text-sm font-rajdhani">MAR</div>
+                        </div>
+                        <div class="flex-1 ml-4">
+                            <h3 class="text-xl font-orbitron mb-2">Club Night</h3>
+                            <p class="text-gray-400 font-rajdhani text-sm mb-2">
+                                <i class="fas fa-map-marker-alt mr-2"></i>Pune, Maharashtra
+                            </p>
+                            <p class="text-gray-500 font-rajdhani text-xs mb-4">
+                                <i class="fas fa-clock mr-2"></i>10:00 PM
+                            </p>
+                            <a href="#contact" class="btn-stream text-sm">Book Tickets</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Event Card 3 -->
+                    <div class="event-card">
+                        <div class="event-date">
+                            <div class="text-3xl font-bebas">05</div>
+                            <div class="text-sm font-rajdhani">APR</div>
+                        </div>
+                        <div class="flex-1 ml-4">
+                            <h3 class="text-xl font-orbitron mb-2">Wedding Performance</h3>
+                            <p class="text-gray-400 font-rajdhani text-sm mb-2">
+                                <i class="fas fa-map-marker-alt mr-2"></i>Delhi, NCR
+                            </p>
+                            <p class="text-gray-500 font-rajdhani text-xs mb-4">
+                                <i class="fas fa-clock mr-2"></i>7:00 PM
+                            </p>
+                            <a href="#contact" class="btn-stream text-sm">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Past Events -->
+            <div id="past-events" class="event-content hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Past Event Card 1 -->
+                    <div class="event-card opacity-75">
+                        <div class="event-date">
+                            <div class="text-3xl font-bebas">10</div>
+                            <div class="text-sm font-rajdhani">FEB</div>
+                        </div>
+                        <div class="flex-1 ml-4">
+                            <h3 class="text-xl font-orbitron mb-2">New Year Party</h3>
+                            <p class="text-gray-400 font-rajdhani text-sm mb-2">
+                                <i class="fas fa-map-marker-alt mr-2"></i>Nandurbar, Maharashtra
+                            </p>
+                            <p class="text-gray-500 font-rajdhani text-xs">
+                                <i class="fas fa-check-circle text-green-400 mr-2"></i>Completed
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Past Event Card 2 -->
+                    <div class="event-card opacity-75">
+                        <div class="event-date">
+                            <div class="text-3xl font-bebas">25</div>
+                            <div class="text-sm font-rajdhani">JAN</div>
+                        </div>
+                        <div class="flex-1 ml-4">
+                            <h3 class="text-xl font-orbitron mb-2">Music Launch Event</h3>
+                            <p class="text-gray-400 font-rajdhani text-sm mb-2">
+                                <i class="fas fa-map-marker-alt mr-2"></i>Mumbai, Maharashtra
+                            </p>
+                            <p class="text-gray-500 font-rajdhani text-xs">
+                                <i class="fas fa-check-circle text-green-400 mr-2"></i>Completed
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acting/Performances Section -->
+    <section id="acting" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bebas mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    ACTING & PERFORMANCES
+                </h2>
+                <p class="text-gray-400 font-rajdhani text-lg">On Screen & Stage</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Performance Card 1 -->
+                <div class="performance-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <div class="aspect-video bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
+                            <i class="fas fa-video text-5xl text-white/80"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-orbitron mb-2">Performance Title</h3>
+                    <p class="text-gray-400 font-rajdhani text-sm">Movie/Show Name</p>
+                    <p class="text-gray-500 font-rajdhani text-xs mt-2">Year: 2024</p>
+                </div>
+                
+                <!-- Performance Card 2 -->
+                <div class="performance-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <div class="aspect-video bg-gradient-to-br from-cyan-600 to-blue-600 flex items-center justify-center">
+                            <i class="fas fa-video text-5xl text-white/80"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-orbitron mb-2">Performance Title</h3>
+                    <p class="text-gray-400 font-rajdhani text-sm">Movie/Show Name</p>
+                    <p class="text-gray-500 font-rajdhani text-xs mt-2">Year: 2024</p>
+                </div>
+                
+                <!-- Performance Card 3 -->
+                <div class="performance-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <div class="aspect-video bg-gradient-to-br from-pink-600 to-purple-600 flex items-center justify-center">
+                            <i class="fas fa-video text-5xl text-white/80"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-orbitron mb-2">Performance Title</h3>
+                    <p class="text-gray-400 font-rajdhani text-sm">Movie/Show Name</p>
+                    <p class="text-gray-500 font-rajdhani text-xs mt-2">Year: 2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Merchandise Section -->
+    <section id="merchandise" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bebas mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    MERCHANDISE
+                </h2>
+                <p class="text-gray-400 font-rajdhani text-lg">Official DJ Lakhan Merch</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product Card 1 -->
+                <div class="product-card group">
+                    <div class="product-image bg-gradient-to-br from-purple-600 to-pink-600 aspect-square rounded-lg mb-4 overflow-hidden">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-tshirt text-6xl text-white/50"></i>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="btn-primary">View Details</button>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-orbitron mb-2">DJ Lakhan T-Shirt</h3>
+                    <p class="text-purple-400 font-rajdhani font-semibold text-xl mb-2">₹999</p>
+                    <button class="btn-stream w-full">Add to Cart</button>
+                </div>
+                
+                <!-- Product Card 2 -->
+                <div class="product-card group">
+                    <div class="product-image bg-gradient-to-br from-cyan-600 to-blue-600 aspect-square rounded-lg mb-4 overflow-hidden">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-headphones text-6xl text-white/50"></i>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="btn-primary">View Details</button>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-orbitron mb-2">Signature Headphones</h3>
+                    <p class="text-purple-400 font-rajdhani font-semibold text-xl mb-2">₹2,499</p>
+                    <button class="btn-stream w-full">Add to Cart</button>
+                </div>
+                
+                <!-- Product Card 3 -->
+                <div class="product-card group">
+                    <div class="product-image bg-gradient-to-br from-pink-600 to-purple-600 aspect-square rounded-lg mb-4 overflow-hidden">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-compact-disc text-6xl text-white/50"></i>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="btn-primary">View Details</button>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-orbitron mb-2">Signed CD</h3>
+                    <p class="text-purple-400 font-rajdhani font-semibold text-xl mb-2">₹499</p>
+                    <button class="btn-stream w-full">Add to Cart</button>
+                </div>
+                
+                <!-- Product Card 4 -->
+                <div class="product-card group">
+                    <div class="product-image bg-gradient-to-br from-purple-600 to-cyan-600 aspect-square rounded-lg mb-4 overflow-hidden">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-hat-cowboy text-6xl text-white/50"></i>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="btn-primary">View Details</button>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-orbitron mb-2">DJ Cap</h3>
+                    <p class="text-purple-400 font-rajdhani font-semibold text-xl mb-2">₹599</p>
+                    <button class="btn-stream w-full">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog/News Section -->
+    <section id="blog" class="py-20 bg-gray-800/50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bebas mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    NEWS & UPDATES
+                </h2>
+                <p class="text-gray-400 font-rajdhani text-lg">Latest Announcements & Collaborations</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Blog Card 1 -->
+                <article class="blog-card group">
+                    <div class="blog-image bg-gradient-to-br from-purple-600 to-pink-600 aspect-video rounded-lg mb-4 overflow-hidden">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-newspaper text-5xl text-white/50"></i>
+                        </div>
+                    </div>
+                    <div class="blog-date text-sm text-gray-500 font-rajdhani mb-2">
+                        <i class="fas fa-calendar mr-2"></i>March 10, 2024
+                    </div>
+                    <h3 class="text-xl font-orbitron mb-2 group-hover:text-purple-400 transition-colors">New Remix Release</h3>
+                    <p class="text-gray-400 font-rajdhani text-sm mb-4">
+                        Excited to announce my latest remix collaboration with top Bollywood artist...
+                    </p>
+                    <a href="#" class="text-purple-400 font-rajdhani font-semibold hover:text-purple-300 transition-colors">
+                        Read More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </article>
+                
+                <!-- Blog Card 2 -->
+                <article class="blog-card group">
+                    <div class="blog-image bg-gradient-to-br from-cyan-600 to-blue-600 aspect-video rounded-lg mb-4 overflow-hidden">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-newspaper text-5xl text-white/50"></i>
+                        </div>
+                    </div>
+                    <div class="blog-date text-sm text-gray-500 font-rajdhani mb-2">
+                        <i class="fas fa-calendar mr-2"></i>March 5, 2024
+                    </div>
+                    <h3 class="text-xl font-orbitron mb-2 group-hover:text-purple-400 transition-colors">Upcoming Festival Performance</h3>
+                    <p class="text-gray-400 font-rajdhani text-sm mb-4">
+                        Join me at the biggest music festival of the year in Mumbai...
+                    </p>
+                    <a href="#" class="text-purple-400 font-rajdhani font-semibold hover:text-purple-300 transition-colors">
+                        Read More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </article>
+                
+                <!-- Blog Card 3 -->
+                <article class="blog-card group">
+                    <div class="blog-image bg-gradient-to-br from-pink-600 to-purple-600 aspect-video rounded-lg mb-4 overflow-hidden">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-newspaper text-5xl text-white/50"></i>
+                        </div>
+                    </div>
+                    <div class="blog-date text-sm text-gray-500 font-rajdhani mb-2">
+                        <i class="fas fa-calendar mr-2"></i>February 28, 2024
+                    </div>
+                    <h3 class="text-xl font-orbitron mb-2 group-hover:text-purple-400 transition-colors">Collaboration Announcement</h3>
+                    <p class="text-gray-400 font-rajdhani text-sm mb-4">
+                        Thrilled to collaborate with international DJ for upcoming track...
+                    </p>
+                    <a href="#" class="text-purple-400 font-rajdhani font-semibold hover:text-purple-300 transition-colors">
+                        Read More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bebas mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    TESTIMONIALS & COLLABORATIONS
+                </h2>
+                <p class="text-gray-400 font-rajdhani text-lg">What Artists & Partners Say</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Testimonial Card 1 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-user text-2xl text-white"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-orbitron text-lg">Artist Name</h4>
+                            <p class="text-gray-400 font-rajdhani text-sm">Bollywood Singer</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-3">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-300 font-rajdhani italic">
+                        "Working with DJ Lakhan was an incredible experience. His remixes bring a fresh perspective to every track."
+                    </p>
+                </div>
+                
+                <!-- Testimonial Card 2 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-600 to-blue-600 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-user text-2xl text-white"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-orbitron text-lg">Producer Name</h4>
+                            <p class="text-gray-400 font-rajdhani text-sm">Music Producer</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-3">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-300 font-rajdhani italic">
+                        "DJ Lakhan's creativity and professionalism make him one of the best collaborators I've worked with."
+                    </p>
+                </div>
+                
+                <!-- Testimonial Card 3 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-pink-600 to-purple-600 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-user text-2xl text-white"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-orbitron text-lg">Event Organizer</h4>
+                            <p class="text-gray-400 font-rajdhani text-sm">Festival Director</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-3">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-300 font-rajdhani italic">
+                        "DJ Lakhan's performance was electrifying! The crowd loved every moment. Highly recommended!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Press/Media Section -->
+    <section id="press" class="py-20 bg-gray-800/50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bebas mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    PRESS & MEDIA
+                </h2>
+                <p class="text-gray-400 font-rajdhani text-lg">Articles, Interviews & Features</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Press Card 1 -->
+                <div class="press-card group">
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <div class="press-image bg-gradient-to-br from-purple-600 to-pink-600 w-full md:w-32 h-32 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-newspaper text-4xl text-white/50"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-xs text-gray-500 font-rajdhani mb-2">
+                                <i class="fas fa-calendar mr-2"></i>March 1, 2024
+                            </div>
+                            <h3 class="text-xl font-orbitron mb-2 group-hover:text-purple-400 transition-colors">
+                                Featured in Music Magazine
+                            </h3>
+                            <p class="text-gray-400 font-rajdhani text-sm mb-3">
+                                DJ Lakhan talks about his journey and upcoming projects in exclusive interview...
+                            </p>
+                            <a href="#" class="text-purple-400 font-rajdhani text-sm hover:text-purple-300 transition-colors">
+                                Read Article <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Press Card 2 -->
+                <div class="press-card group">
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <div class="press-image bg-gradient-to-br from-cyan-600 to-blue-600 w-full md:w-32 h-32 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-video text-4xl text-white/50"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-xs text-gray-500 font-rajdhani mb-2">
+                                <i class="fas fa-calendar mr-2"></i>February 20, 2024
+                            </div>
+                            <h3 class="text-xl font-orbitron mb-2 group-hover:text-purple-400 transition-colors">
+                                TV Interview Feature
+                            </h3>
+                            <p class="text-gray-400 font-rajdhani text-sm mb-3">
+                                Watch DJ Lakhan's exclusive interview on popular music show...
+                            </p>
+                            <a href="#" class="text-purple-400 font-rajdhani text-sm hover:text-purple-300 transition-colors">
+                                Watch Video <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Press Card 3 -->
+                <div class="press-card group">
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <div class="press-image bg-gradient-to-br from-pink-600 to-purple-600 w-full md:w-32 h-32 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-microphone text-4xl text-white/50"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-xs text-gray-500 font-rajdhani mb-2">
+                                <i class="fas fa-calendar mr-2"></i>February 15, 2024
+                            </div>
+                            <h3 class="text-xl font-orbitron mb-2 group-hover:text-purple-400 transition-colors">
+                                Podcast Appearance
+                            </h3>
+                            <p class="text-gray-400 font-rajdhani text-sm mb-3">
+                                Listen to DJ Lakhan discuss music production and industry insights...
+                            </p>
+                            <a href="#" class="text-purple-400 font-rajdhani text-sm hover:text-purple-300 transition-colors">
+                                Listen Now <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Press Card 4 -->
+                <div class="press-card group">
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <div class="press-image bg-gradient-to-br from-purple-600 to-cyan-600 w-full md:w-32 h-32 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-newspaper text-4xl text-white/50"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-xs text-gray-500 font-rajdhani mb-2">
+                                <i class="fas fa-calendar mr-2"></i>February 10, 2024
+                            </div>
+                            <h3 class="text-xl font-orbitron mb-2 group-hover:text-purple-400 transition-colors">
+                                Online Magazine Feature
+                            </h3>
+                            <p class="text-gray-400 font-rajdhani text-sm mb-3">
+                                Read about DJ Lakhan's rise to fame and musical influences...
+                            </p>
+                            <a href="#" class="text-purple-400 font-rajdhani text-sm hover:text-purple-300 transition-colors">
+                                Read Article <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Achievements Section -->
+    <section id="awards" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bebas mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    AWARDS & ACHIEVEMENTS
+                </h2>
+                <p class="text-gray-400 font-rajdhani text-lg">Recognition & Milestones</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-6">
+                    <!-- Award Item 1 -->
+                    <div class="award-item">
+                        <div class="flex items-start gap-6">
+                            <div class="award-icon">
+                                <i class="fas fa-trophy text-4xl text-yellow-400"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-orbitron mb-2 text-purple-400">Best Remix of the Year</h3>
+                                <p class="text-gray-400 font-rajdhani mb-2">Music Awards 2024</p>
+                                <p class="text-gray-300 font-rajdhani">Recognized for outstanding remix work in Bollywood music industry.</p>
+                            </div>
+                            <div class="text-gray-500 font-rajdhani text-sm">2024</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Award Item 2 -->
+                    <div class="award-item">
+                        <div class="flex items-start gap-6">
+                            <div class="award-icon">
+                                <i class="fas fa-medal text-4xl text-purple-400"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-orbitron mb-2 text-purple-400">Top Influencer Award</h3>
+                                <p class="text-gray-400 font-rajdhani mb-2">Social Media Awards</p>
+                                <p class="text-gray-300 font-rajdhani">Acknowledged as one of the top music influencers in India.</p>
+                            </div>
+                            <div class="text-gray-500 font-rajdhani text-sm">2023</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Award Item 3 -->
+                    <div class="award-item">
+                        <div class="flex items-start gap-6">
+                            <div class="award-icon">
+                                <i class="fas fa-star text-4xl text-cyan-400"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-orbitron mb-2 text-purple-400">Breakthrough Artist</h3>
+                                <p class="text-gray-400 font-rajdhani mb-2">Independent Music Awards</p>
+                                <p class="text-gray-300 font-rajdhani">Recognized for exceptional contribution to independent music scene.</p>
+                            </div>
+                            <div class="text-gray-500 font-rajdhani text-sm">2023</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Achievement Item -->
+                    <div class="award-item">
+                        <div class="flex items-start gap-6">
+                            <div class="award-icon">
+                                <i class="fas fa-fire text-4xl text-pink-400"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-orbitron mb-2 text-purple-400">100 Million Streams</h3>
+                                <p class="text-gray-400 font-rajdhani mb-2">Milestone Achievement</p>
+                                <p class="text-gray-300 font-rajdhani">Reached 100 million streams across all platforms.</p>
+                            </div>
+                            <div class="text-gray-500 font-rajdhani text-sm">2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800/50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-5xl font-bebas mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                        ABOUT DJ LAKHAN
+                    </h2>
+                </div>
+                
+                <div class="about-card">
+                    <div class="flex flex-col md:flex-row gap-8 items-center mb-8">
+                        <div class="w-full md:w-64 h-64 rounded-full bg-gradient-to-br from-purple-600 via-pink-600 to-cyan-600 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-user text-8xl text-white/80"></i>
+                        </div>
+                        <div class="flex-1 text-center md:text-left">
+                            <h3 class="text-3xl font-orbitron mb-4 text-purple-400">DJ Lakhan</h3>
+                            <p class="text-gray-300 font-rajdhani text-lg leading-relaxed mb-4">
+                                A renowned Indian DJ, music producer, lyricist, and influencer from Nandurbar, Maharashtra, India. Known for creating electrifying remixes and original compositions, DJ Lakhan has carved a unique space in the Indian music industry. Since launching his YouTube channel in May 2021, he has amassed over 138K subscribers and 43+ million views with 428 videos.
+                            </p>
+                            <div class="flex flex-wrap gap-4 text-sm text-gray-400 font-rajdhani">
+                                <span><i class="fas fa-map-marker-alt mr-2 text-purple-400"></i>Nandurbar, Maharashtra, India</span>
+                                <span><i class="fas fa-calendar-alt mr-2 text-cyan-400"></i>Joined YouTube: May 1, 2021</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="stat-card">
+                            <i class="fab fa-youtube text-4xl text-red-400 mb-4"></i>
+                            <h4 class="text-2xl font-orbitron mb-2">YouTube</h4>
+                            <p class="text-gray-400 font-rajdhani">138K Subscribers</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-video text-4xl text-purple-400 mb-4"></i>
+                            <h4 class="text-2xl font-orbitron mb-2">Videos</h4>
+                            <p class="text-gray-400 font-rajdhani">428 Uploaded</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-eye text-4xl text-cyan-400 mb-4"></i>
+                            <h4 class="text-2xl font-orbitron mb-2">Total Views</h4>
+                            <p class="text-gray-400 font-rajdhani">43.4M+ Views</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-calendar text-4xl text-pink-400 mb-4"></i>
+                            <h4 class="text-2xl font-orbitron mb-2">Since</h4>
+                            <p class="text-gray-400 font-rajdhani">May 2021</p>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t border-gray-700 pt-8">
+                        <h4 class="text-2xl font-orbitron mb-4 text-purple-400">Achievements & Highlights</h4>
+                        <ul class="space-y-3 font-rajdhani text-gray-300">
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-purple-400 mr-3 mt-1"></i>
+                                <span><strong>138K+ YouTube Subscribers</strong> - Growing community of music lovers</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-purple-400 mr-3 mt-1"></i>
+                                <span><strong>43.4M+ Total Views</strong> - Reaching millions worldwide</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-purple-400 mr-3 mt-1"></i>
+                                <span><strong>428 Videos</strong> - Consistent content creation since May 2021</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-purple-400 mr-3 mt-1"></i>
+                                <span>Featured in multiple Bollywood tracks and collaborations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-purple-400 mr-3 mt-1"></i>
+                                <span>Recognized as a top music influencer from Nandurbar, Maharashtra</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="py-16 bg-gradient-to-r from-purple-900/50 to-cyan-900/50 border-y border-purple-500/20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-4xl font-bebas mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    STAY UPDATED
+                </h2>
+                <p class="text-gray-300 font-rajdhani mb-8">
+                    Subscribe to get the latest updates on new releases, events, and exclusive content.
+                </p>
+                <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input 
+                        type="email" 
+                        id="newsletter-email" 
+                        name="email" 
+                        required 
+                        placeholder="Enter your email"
+                        class="flex-1 form-input"
+                    >
+                    <button type="submit" class="btn-primary whitespace-nowrap">
+                        <i class="fas fa-paper-plane mr-2"></i> Subscribe
+                    </button>
+                </form>
+                <p class="text-gray-400 font-rajdhani text-sm mt-4">
+                    <i class="fas fa-shield-alt mr-2"></i>We respect your privacy. Unsubscribe at any time.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Booking Section -->
+    <section id="contact" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bebas mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    CONTACT & BOOKING
+                </h2>
+                <p class="text-gray-400 font-rajdhani text-lg">Get in Touch for Collaborations & Events</p>
+            </div>
+            
+            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Contact Form -->
+                <div class="form-card">
+                    <h3 class="text-2xl font-orbitron mb-6 text-purple-400">Send a Message</h3>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-300 font-rajdhani mb-2">Name</label>
+                            <input type="text" id="name" name="name" required 
+                                class="form-input" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-300 font-rajdhani mb-2">Email</label>
+                            <input type="email" id="email" name="email" required 
+                                class="form-input" placeholder="your.email@example.com">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-300 font-rajdhani mb-2">Phone</label>
+                            <input type="tel" id="phone" name="phone" 
+                                class="form-input" placeholder="+91 1234567890">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-300 font-rajdhani mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                class="form-input" placeholder="Your message..."></textarea>
+                        </div>
+                        <div>
+                            <label for="file-upload" class="block text-gray-300 font-rajdhani mb-2">
+                                <i class="fas fa-paperclip mr-2"></i>Attach File (Optional)
+                            </label>
+                            <div class="file-upload-container">
+                                <input type="file" id="file-upload" name="file" 
+                                    class="file-input" 
+                                    accept="image/*,.pdf,.doc,.docx,.mp3,.mp4"
+                                    multiple>
+                                <label for="file-upload" class="file-upload-label">
+                                    <i class="fas fa-cloud-upload-alt mr-2"></i>
+                                    <span class="file-upload-text">Choose files or drag & drop</span>
+                                </label>
+                                <div id="file-list" class="file-list"></div>
+                            </div>
+                            <p class="text-gray-500 font-rajdhani text-xs mt-2">
+                                Max file size: 10MB. Supported: Images, PDF, Documents, Audio, Video
+                            </p>
+                        </div>
+                        <button type="submit" class="btn-primary w-full">
+                            <i class="fas fa-paper-plane mr-2"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Booking Form -->
+                <div class="form-card">
+                    <h3 class="text-2xl font-orbitron mb-6 text-purple-400">Book for Event</h3>
+                    <form id="booking-form" class="space-y-6">
+                        <div>
+                            <label for="event-name" class="block text-gray-300 font-rajdhani mb-2">Event Name</label>
+                            <input type="text" id="event-name" name="event-name" required 
+                                class="form-input" placeholder="Event Name">
+                        </div>
+                        <div>
+                            <label for="event-date" class="block text-gray-300 font-rajdhani mb-2">Event Date</label>
+                            <input type="date" id="event-date" name="event-date" required 
+                                class="form-input">
+                        </div>
+                        <div>
+                            <label for="event-location" class="block text-gray-300 font-rajdhani mb-2">Location</label>
+                            <input type="text" id="event-location" name="event-location" required 
+                                class="form-input" placeholder="City, State">
+                        </div>
+                        <div>
+                            <label for="event-type" class="block text-gray-300 font-rajdhani mb-2">Event Type</label>
+                            <select id="event-type" name="event-type" required class="form-input">
+                                <option value="">Select Event Type</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="festival">Music Festival</option>
+                                <option value="club">Club Night</option>
+                                <option value="private">Private Party</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="budget" class="block text-gray-300 font-rajdhani mb-2">Budget Range</label>
+                            <select id="budget" name="budget" required class="form-input">
+                                <option value="">Select Budget Range</option>
+                                <option value="under-50k">Under ₹50,000</option>
+                                <option value="50k-1lakh">₹50,000 - ₹1,00,000</option>
+                                <option value="1lakh-2lakh">₹1,00,000 - ₹2,00,000</option>
+                                <option value="2lakh-plus">₹2,00,000+</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="booking-message" class="block text-gray-300 font-rajdhani mb-2">Additional Details</label>
+                            <textarea id="booking-message" name="booking-message" rows="4" 
+                                class="form-input" placeholder="Tell us more about your event..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-secondary w-full">
+                            <i class="fas fa-calendar-check mr-2"></i> Request Booking
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="max-w-4xl mx-auto mt-12">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="contact-info-card text-center">
+                        <i class="fas fa-envelope text-4xl text-purple-400 mb-4"></i>
+                        <h4 class="font-orbitron mb-2">Email</h4>
+                        <a href="mailto:djlakhanhirenandurbar556@gmail.com" class="text-gray-400 font-rajdhani hover:text-purple-400 transition-colors">djlakhanhirenandurbar556@gmail.com</a>
+                    </div>
+                    <div class="contact-info-card text-center">
+                        <i class="fas fa-phone text-4xl text-cyan-400 mb-4"></i>
+                        <h4 class="font-orbitron mb-2">Phone / WhatsApp</h4>
+                        <a href="tel:+917276773494" class="text-gray-400 font-rajdhani hover:text-purple-400 transition-colors">+91 72767 73494</a>
+                    </div>
+                    <div class="contact-info-card text-center">
+                        <i class="fas fa-map-marker-alt text-4xl text-pink-400 mb-4"></i>
+                        <h4 class="font-orbitron mb-2">Location</h4>
+                        <p class="text-gray-400 font-rajdhani">Nandurbar, Maharashtra</p>
+                    </div>
+                </div>
+                
+                <!-- WhatsApp Quick Contact -->
+                <div class="mt-8 text-center">
+                    <h4 class="text-xl font-orbitron mb-4 text-purple-400">Quick Contact via WhatsApp</h4>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="https://wa.me/917276773494?text=Hello%20DJ%20Lakhan%2C%20I%20would%20like%20to%20get%20in%20touch." 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="whatsapp-btn">
+                            <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+                        </a>
+                        <a href="https://wa.me/917276773494?text=Hello%2C%20I%20would%20like%20to%20book%20DJ%20Lakhan%20for%20an%20event." 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="whatsapp-btn-secondary">
+                            <i class="fas fa-calendar-check mr-2"></i> Book via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/917276773494?text=Hello%20DJ%20Lakhan%2C%20I%20would%20like%20to%20get%20in%20touch." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="whatsapp-float"
+       aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us</span>
+    </a>
+    
+    <!-- Live Chat Widget -->
+    <div id="chat-widget" class="chat-widget">
+        <div id="chat-toggle" class="chat-toggle">
+            <i class="fas fa-comments"></i>
+            <span class="chat-badge">1</span>
+        </div>
+        
+        <div id="chat-window" class="chat-window">
+            <div class="chat-header">
+                <div class="flex items-center gap-3">
+                    <div class="chat-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-orbitron">DJ Lakhan Support</h4>
+                        <p class="text-xs text-gray-400 font-rajdhani">Usually replies instantly</p>
+                    </div>
+                </div>
+                <button id="chat-close" class="chat-close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="chat-messages" id="chat-messages">
+                <div class="chat-message bot-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>Hello! 👋 Welcome to DJ Lakhan's website. How can I help you today?</p>
+                        <span class="message-time">Just now</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-quick-replies">
+                <button class="quick-reply-btn" data-message="I want to book for an event">
+                    Book Event
+                </button>
+                <button class="quick-reply-btn" data-message="Tell me about your remixes">
+                    Remixes
+                </button>
+                <button class="quick-reply-btn" data-message="What are your rates?">
+                    Pricing
+                </button>
+            </div>
+            
+            <div class="chat-input-container">
+                <form id="chat-form" class="chat-form">
+                    <input type="text" 
+                           id="chat-input" 
+                           class="chat-input" 
+                           placeholder="Type your message..."
+                           autocomplete="off">
+                    <button type="submit" class="chat-send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+                <div class="chat-footer">
+                    <span class="text-xs text-gray-500 font-rajdhani">
+                        <i class="fab fa-whatsapp mr-1"></i>
+                        Prefer WhatsApp? <a href="https://wa.me/917276773494" target="_blank" class="text-purple-400 hover:text-purple-300">Click here</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-purple-500/20 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-xl font-bebas mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">DJ LAKHAN</h4>
+                    <p class="text-gray-400 font-rajdhani text-sm">
+                        Creating music that moves your soul. Follow for the latest remixes, songs, and performances.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-orbitron mb-4">Quick Links</h4>
+                    <ul class="space-y-2 font-rajdhani text-sm text-gray-400">
+                        <li><a href="#home" class="hover:text-purple-400 transition-colors">Home</a></li>
+                        <li><a href="#remixes" class="hover:text-purple-400 transition-colors">Remixes</a></li>
+                        <li><a href="#songs" class="hover:text-purple-400 transition-colors">Songs</a></li>
+                        <li><a href="#about" class="hover:text-purple-400 transition-colors">About</a></li>
+                        <li><a href="#contact" class="hover:text-purple-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-orbitron mb-4">Follow Me</h4>
+                    <div class="flex space-x-4 mb-6">
+                        <a href="https://www.instagram.com/dj_lakhan._nandurbar_18_/" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@DjLakhanNandurbar18" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://open.spotify.com/artist/5camv57kOKlhE8YxkXrK2n?si=XgNjKTHAQEuzv3cvvTgRsw" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="Spotify">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                        <a href="https://www.facebook.com/lakhan.hirea" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://music.apple.com/us/artist/dj-lakhan-nandurbar/1604366051" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="Apple Music">
+                            <i class="fab fa-apple"></i>
+                        </a>
+                    </div>
+                    <h4 class="text-lg font-orbitron mb-4">Newsletter</h4>
+                    <form id="footer-newsletter" class="flex flex-col gap-2">
+                        <input 
+                            type="email" 
+                            placeholder="Your email" 
+                            class="form-input text-sm"
+                            required
+                        >
+                        <button type="submit" class="btn-stream text-sm">
+                            <i class="fas fa-envelope mr-2"></i> Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400 font-rajdhani text-sm">
+                    &copy; 2024 DJ Lakhan. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mini Music Player (Fixed at Bottom) -->
+    <div id="mini-player" class="mini-player hidden">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center gap-4">
+                <!-- Track Info -->
+                <div class="flex items-center gap-4 flex-shrink-0 min-w-0 flex-1">
+                    <div class="player-thumbnail w-16 h-16 rounded-lg overflow-hidden bg-gradient-to-br from-purple-600 to-cyan-600 flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-music text-white text-xl"></i>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                        <div class="player-track-name font-orbitron text-sm font-semibold truncate">Track Name</div>
+                        <div class="player-track-artist font-rajdhani text-xs text-gray-400 truncate">Artist Name</div>
+                    </div>
+                </div>
+                
+                <!-- Player Controls -->
+                <div class="flex items-center gap-2 flex-shrink-0">
+                    <button id="player-shuffle" class="player-control-btn" title="Shuffle">
+                        <i class="fas fa-random"></i>
+                    </button>
+                    <button id="player-prev" class="player-control-btn" title="Previous">
+                        <i class="fas fa-step-backward"></i>
+                    </button>
+                    <button id="player-play-pause" class="player-play-pause-btn" title="Play/Pause">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button id="player-next" class="player-control-btn" title="Next">
+                        <i class="fas fa-step-forward"></i>
+                    </button>
+                    <button id="player-repeat" class="player-control-btn" title="Repeat">
+                        <i class="fas fa-redo"></i>
+                    </button>
+                </div>
+                
+                <!-- Progress & Time -->
+                <div class="hidden md:flex items-center gap-3 flex-1 max-w-md">
+                    <span class="player-current-time font-rajdhani text-xs text-gray-400">0:00</span>
+                    <div class="player-progress-container flex-1">
+                        <input type="range" id="player-progress" class="player-progress" min="0" max="100" value="0">
+                    </div>
+                    <span class="player-duration font-rajdhani text-xs text-gray-400">0:00</span>
+                </div>
+                
+                <!-- Volume Control -->
+                <div class="hidden lg:flex items-center gap-2 flex-shrink-0">
+                    <button id="player-mute" class="player-control-btn" title="Mute">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                    <div class="player-volume-container w-24">
+                        <input type="range" id="player-volume" class="player-volume" min="0" max="100" value="70">
+                    </div>
+                </div>
+                
+                <!-- Queue/Playlist Toggle -->
+                <button id="player-queue-toggle" class="player-control-btn" title="Queue">
+                    <i class="fas fa-list"></i>
+                    <span id="player-queue-count" class="player-queue-badge">0</span>
+                </button>
+                
+                <!-- Close Player -->
+                <button id="player-close" class="player-control-btn" title="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Hidden Audio Element for Audio Playback -->
+        <audio id="audio-player" preload="metadata"></audio>
+    </div>
+    
+    <!-- Playlist/Queue Sidebar -->
+    <div id="player-queue" class="player-queue">
+        <div class="player-queue-header">
+            <h3 class="font-orbitron text-lg">Playlist</h3>
+            <button id="queue-close" class="player-control-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="player-queue-list" id="queue-list">
+            <!-- Queue items will be added here dynamically -->
+            <div class="player-queue-empty">
+                <i class="fas fa-music text-4xl text-gray-600 mb-4"></i>
+                <p class="text-gray-400 font-rajdhani">Your playlist is empty</p>
+                <p class="text-gray-500 font-rajdhani text-sm mt-2">Click play on any track to start</p>
+            </div>
+        </div>
+        <div class="player-queue-footer">
+            <button id="queue-clear" class="btn-stream w-full">
+                <i class="fas fa-trash mr-2"></i> Clear Playlist
+            </button>
+        </div>
+    </div>
+    
+    <!-- Audio/Video Player Modal -->
+    <div id="player-modal" class="video-modal">
+        <div class="video-modal-content">
+            <button class="video-modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <!-- YouTube Player -->
+            <div id="youtube-player" class="hidden">
+                <iframe id="youtube-iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <!-- SoundCloud Player -->
+            <div id="soundcloud-player" class="hidden">
+                <iframe id="soundcloud-iframe" width="100%" height="400" scrolling="no" frameborder="no" allow="autoplay" src=""></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="gallery-modal">
+        <div class="gallery-modal-content">
+            <button class="gallery-modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <img src="" alt="Gallery Image">
+        </div>
+    </div>
+
+    <!-- Install Prompt -->
+    <div id="install-prompt" class="install-prompt hidden">
+        <div class="install-prompt-content">
+            <div class="flex items-center gap-4">
+                <div class="install-prompt-icon">
+                    <i class="fas fa-mobile-alt text-3xl"></i>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-orbitron text-lg mb-1">Install DJ Lakhan App</h3>
+                    <p class="text-gray-400 font-rajdhani text-sm">Add to home screen for quick access</p>
+                </div>
+                <div class="flex gap-2">
+                    <button id="install-prompt-install" class="btn-primary text-sm px-4 py-2">
+                        Install
+                    </button>
+                    <button id="install-prompt-close" class="player-control-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Offline Indicator -->
+    <div id="offline-indicator" class="offline-indicator hidden">
+        <div class="offline-indicator-content">
+            <i class="fas fa-wifi text-yellow-400 mr-2"></i>
+            <span class="font-rajdhani text-sm">You're offline. Some features may be limited.</span>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="pwa.js"></script>
+</body>
+</html>
